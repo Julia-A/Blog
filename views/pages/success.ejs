@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Successful</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  
+  <div class="container-success">
+    <h1><%- message %> Successful!</h1>
+    <p>You will be redirected shortly...</p>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "/posts";
+    }, 2000);
+  </script>
+</body>
+</html>

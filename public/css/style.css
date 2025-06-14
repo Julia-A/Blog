@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* === CSS Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+/* === Navbar Styles === */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: #3E5C4F; /* Deep earthy green */
+  color: #F4F4F4; /* Light neutral text */
+  font-family: 'Nunito', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid #A8B29D; /* A nude neutral border */
+}
+
+.navbar a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #F4F4F4; /* Light text color */
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #A8B29D; /* Nude tone for hover effect */
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness - Stack links vertically */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar a {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+}
+
+
+
+/* === Homepage Styles === */
+.container-home {
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 0.6rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Nunito', sans-serif;
+  color: #333333;
+}
+
+.container-home h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  color: #3e5c4f; /* Deep green */
+}
+
+.container-home h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #a8b29d; /* Nude accent */
+  margin-bottom: 2rem;
+}
+
+.hero-img {
+  margin: 2rem 0;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.get-started {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  background-color: #3e5c4f;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.get-started:hover {
+  background-color: #a8b29d; /* Nude accent on hover */
+}
+
+.container-home form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-home input,
+.container-home textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.container-home input[type="submit"] {
+  background-color: #3e5c4f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.container-home input[type="submit"]:hover {
+  background-color: #a8b29d;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .container-home h1 {
+    font-size: 2.5rem;
+  }
+
+  .container-home h2 {
+    font-size: 1.2rem;
+  }
+
+  .get-started {
+    padding: 0.8rem 1.8rem;
+  }
+
+  .hero-img img {
+    max-width: 100%;
+  }
+
+  .container-home form {
+    width: 90%;
+  }
+}
+
+
+
+
+/* === Auth Pages (Login & Register) === */
+.container-auth {
+  max-width: 500px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Nunito', sans-serif;
+  color: #333333;
+  text-align: center;
+}
+
+.container-auth h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3e5c4f; /* Deep green */
+  margin-bottom: 2rem;
+}
+
+.container-auth form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.container-auth input {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.container-auth button {
+  padding: 1rem 2rem;
+  background-color: #3e5c4f; /* Deep green */
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container-auth button:hover {
+  background-color: #a8b29d; /* Nude accent on hover */
+}
+
+.container-auth p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 1.5rem;
+}
+
+.container-auth a {
+  color: #0077ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.container-auth a:hover {
+  text-decoration: underline;
+}
+
+.dont-have {
+  text-align: center;
+}
+
+.dont-have a {
+  color: #3E5C4F;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 768px) {
+  .container-auth {
+    padding: 1.5rem;
+    margin: 2rem;
+  }
+
+  .container-auth h1 {
+    font-size: 2rem;
+  }
+
+  .container-auth button {
+    padding: 0.8rem 1.8rem;
+  }
+}
+
+
+/* Password field container */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.password-container .eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.password-container .eye-icon:hover {
+  color: #0077ff; /* Blue color on hover */
+}
+
+
+
+
+
+/* === Posts Page === */
+.container-posts {
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #3e5c4f; /* Deep green */
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #a8b29d; /* Nude tone */
+  margin-bottom: 2rem;
+}
+
+.post {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #3e5c4f;
+}
+
+.post a {
+  color: #0077ff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.post a:hover {
+  color: #a8b29d; /* Nude on hover */
+  text-decoration: underline;
+}
+
+.post p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+a[href="/posts/admin/create"] {
+  background-color: #3e5c4f;
+  color: white;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  display: inline-block;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+a[href="/posts/admin/create"]:hover {
+  background-color: #a8b29d; /* Nude on hover */
+}
+
+/* Buttons for Edit/Delete (Admin only) */
+.edit-post {
+  background-color: #3e5c4f;
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post form button {
+  background-color: #ff4c4c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post form button:hover {
+  background-color: #ff2a2a; /* Darker red on hover */
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .post {
+    padding: 1rem;
+  }
+
+  .post h2 {
+    font-size: 1.5rem;
+  }
+
+  .post p {
+    font-size: 0.9rem;
+  }
+
+  a[href="/posts/admin/create"] {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .post form button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+
+
+/* === Admin Dashboard Styles === */
+.container-admin {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Nunito', sans-serif;
+  color: #333333;
+  text-align: center;
+}
+
+.container-admin h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3e5c4f; /* Deep green */
+  margin-bottom: 1.5rem;
+}
+
+.container-admin p {
+  font-size: 1.2rem;
+  color: #555555;
+  margin-bottom: 2rem;
+}
+
+.container-admin a {
+  background-color: #3e5c4f; /* Deep green */
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 1rem 0;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.container-admin a:hover {
+  background-color: #a8b29d; /* Nude tone on hover */
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .container-admin {
+    padding: 1.5rem;
+    margin: 2rem;
+  }
+
+  .container-admin h1 {
+    font-size: 2rem;
+  }
+
+  .container-admin p {
+    font-size: 1rem;
+  }
+
+  .container-admin a {
+    font-size: 1rem;
+    padding: 0.8rem 1.8rem;
+  }
+}
+
+
+
+
+/* === Admin Create/Edit Post Pages === */
+.container-crud {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Nunito', sans-serif;
+  color: #333333;
+  text-align: center;
+}
+
+.container-crud h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3e5c4f; /* Deep green */
+  margin-bottom: 1.5rem;
+}
+
+.container-crud input,
+.container-crud textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.container-crud textarea {
+  min-height: 150px;
+}
+
+.container-crud button {
+  padding: 1rem 2rem;
+  background-color: #3e5c4f; /* Deep green */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container-crud button:hover {
+  background-color: #a8b29d; /* Nude accent on hover */
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .container-crud {
+    padding: 1.5rem;
+    margin: 2rem;
+  }
+
+  .container-crud h1 {
+    font-size: 2rem;
+  }
+
+  .container-crud input,
+  .container-crud textarea {
+    font-size: 1.1rem;
+  }
+
+  .container-crud button {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+
+
+
+/* === Single Post Page === */
+.container-single {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Nunito', sans-serif;
+  color: #333333;
+  text-align: center;
+}
+
+.container-single h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #3e5c4f; /* Deep green */
+  margin-bottom: 2rem;
+}
+
+.container-single p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.container-single a {
+  color: #0077ff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.container-single a:hover {
+  color: #a8b29d; /* Nude accent on hover */
+}
+
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .container-single {
+    padding: 1.5rem;
+    margin: 2rem;
+  }
+
+  .container-single h1 {
+    font-size: 2.2rem;
+  }
+
+  .container-single p {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+/* === Success Page === */
+.container-success {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  color: #333333;
+}
+
+.container-success h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3e5c4f; /* Deep green */
+  margin-bottom: 1.5rem;
+}
+
+.container-success p {
+  font-size: 1.2rem;
+  color: #555555;
+  margin-bottom: 2rem;
+}
+
+.container-success a {
+  background-color: #3e5c4f; /* Deep green */
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 2rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.container-success a:hover {
+  background-color: #a8b29d; /* Nude accent on hover */
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .container-success {
+    padding: 1.5rem;
+    margin: 2rem;
+  }
+
+  .container-success h1 {
+    font-size: 2rem;
+  }
+
+  .container-success p {
+    font-size: 1rem;
+  }
+
+  .container-success a {
+    padding: 0.8rem 1.8rem;
+  }
+}

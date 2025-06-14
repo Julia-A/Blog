@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posts</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+
+  <div class="container-posts">
+    <h3>Hello <%= user.username %></h3>
+    <h1>All Blog Posts</h1>
+    <% if (user && user.role === 'admin') { %>
+      <a href="/posts/admin/create">+ Create New Post</a>
+    <% } %>
+    <% posts.forEach(post => { %>
+      <div class="post">
+        <h2>
+          <a href="/posts/<%= post._id %>"><%= post.title %></a>
+        </h2>
+        <p>
+          <%= post.body.length > 150 ? post.body.substring(0, 150) + '...' : post.body %>
+        </p>
+        <% if (user && user.role === 'admin') { %>
+          <a href="/posts/admin/edit/<%= post._id %>" class="edit-post">Edit</a>
+          <form action="/posts/admin/delete/<%= post._id %>" method="POST" style="display:inline;">
+            <button type="submit">Delete</button>
+          </form>
+        <% } %>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>

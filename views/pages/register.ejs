@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/password-visibility.js"  defer></script>
+</head>
+<body>
+  <div class="container-auth">
+      <h1>Create an Account</h1>
+      <form action="/register" method="post">
+          <label for="username">Username</label>
+          <input type="text" name="username" placeholder="johndoe" id="username" required>
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="johndoe@email.com" required>
+          <label for="password">Password</label>
+          <div class="password-container">
+            <input type="password" name="password" placeholder="********" required id="password" />
+            <span id="eye-icon" class="eye-icon">&#128065;</span>
+          </div>
+          <button type="submit">Register</button>
+      </form>
+    </div>
+
+    <p class="dont-have">Already have an account? <a href="/login">Login</a></p>
+</body>
+</html>
+
+
+
+

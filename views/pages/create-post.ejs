@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Post</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  
+  <%- include('../partials/navbar') %>
+
+  <div class="container-crud">
+    <h1>Create New Post</h1>
+    <form action="/posts/admin/create" method="POST">
+      <input type="text" name="title" placeholder="Post Title" required><br><br>
+      <textarea name="body" placeholder="Post content" required></textarea><br><br>
+      <button type="submit">Create</button>
+    </form>
+  </div>
+</body>
+</html>

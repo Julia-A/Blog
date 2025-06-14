@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <a href="/">Home</a>
+
+  <% if (!user) { %>
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+  <% } else { %>
+    <a href="/posts">Posts</a>
+    <% if (user.role === 'admin') { %>
+      <a href="/admin/dashboard">Admin Panel</a>
+    <% } %>
+    <a href="/logout">Logout</a>
+  <% } %>
+</nav>

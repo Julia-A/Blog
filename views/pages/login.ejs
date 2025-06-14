@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/password-visibility.js"  defer></script>
+</head>
+<body>
+  <div class="container-auth">
+        <h1>Login</h1>
+        <form action="/login" method="POST">
+          <input type="email" name="email" placeholder="Email" required />
+          <div class="password-container">
+            <input type="password" name="password" placeholder="********" required id="password" />
+            <span id="eye-icon" class="eye-icon">&#128065;</span>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    <p class="dont-have">Don't have an account? <a href="/register" style="text-align: center;">Register</a></p>
+</body>
+</html>
